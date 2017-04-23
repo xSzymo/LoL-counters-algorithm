@@ -1,8 +1,8 @@
-package xszymo.rest.objects.All;
+package xszymo.rest.all;
 
 import java.util.Map;
 
-import xszymo.rest.objects.objects.ChampionEnemyAdvice;
+import xszymo.rest.objects.ChampionEnemyAdvice;
 
 public class AllEnemyChampionsTips {
 	private String type;

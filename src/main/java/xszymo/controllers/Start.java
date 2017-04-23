@@ -1,4 +1,4 @@
-package xszymo.configuration.test;
+package xszymo.controllers;
 
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;

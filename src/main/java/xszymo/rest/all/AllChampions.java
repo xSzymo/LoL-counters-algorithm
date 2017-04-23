@@ -1,8 +1,8 @@
-package xszymo.rest.objects.All;
+package xszymo.rest.all;
 
 import java.util.Map;
 
-import xszymo.rest.objects.objects.ChampionInfo;
+import xszymo.rest.objects.ChampionInfo;
 
 public class AllChampions {
 	private String type;

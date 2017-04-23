@@ -1,4 +1,4 @@
-package xszymo.rest.objects.objects;
+package xszymo.rest.objects;
 
 public class ChampionStats {
 

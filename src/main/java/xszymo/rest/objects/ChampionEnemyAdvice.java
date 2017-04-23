@@ -1,25 +1,25 @@
-	package xszymo.rest.objects.objects;
+	package xszymo.rest.objects;
 
-	public class ChampionTags {
+	public class ChampionEnemyAdvice {
 
 		private Long id;
 		private String name;
 		private String key;
 		private String title;
-		private String[] tags;
+		public String[] enemytips;
 
 
-		public ChampionTags() {
+		public ChampionEnemyAdvice() {
 
 		}
 
-		public ChampionTags(Long id, String name, String key, String title, String[] enemytips) {
+		public ChampionEnemyAdvice(Long id, String name, String key, String title, String[] enemytips) {
 			super();
 			this.id = id;
 			this.name = name;
 			this.key = key;
 			this.title = title;
-			this.setTags(enemytips);
+			this.enemytips = enemytips;
 		}
 
 		public Long getId() {
@@ -52,14 +52,6 @@
 
 		public void setTitle(String title) {
 			this.title = title;
-		}
-
-		public String[] getTags() {
-			return tags;
-		}
-
-		public void setTags(String[] tags) {
-			this.tags = tags;
 		}
 
 	}

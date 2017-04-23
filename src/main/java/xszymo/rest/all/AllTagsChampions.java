@@ -1,19 +1,19 @@
-package xszymo.rest.objects.All;
+package xszymo.rest.all;
 
 import java.util.Map;
 
-import xszymo.rest.objects.objects.ChampionAllyAdvice;
+import xszymo.rest.objects.ChampionTags;
 
-public class AllAllyChampionsTips {
+public class AllTagsChampions {
 	private String type;
 	private String version;
-	private Map<String, ChampionAllyAdvice> data;
+	private Map<String, ChampionTags> data;
 
-	public AllAllyChampionsTips() {
+	public AllTagsChampions() {
 
 	}
 
-	public AllAllyChampionsTips(String type, String version, Map<String, ChampionAllyAdvice> data) {
+	public AllTagsChampions(String type, String version, Map<String, ChampionTags> data) {
 		this.type = type;
 		this.version = version;
 		this.data = data;
@@ -35,11 +35,11 @@ public class AllAllyChampionsTips {
 		this.version = version;
 	}
 
-	public Map<String, ChampionAllyAdvice> getData() {
+	public Map<String, ChampionTags> getData() {
 		return data;
 	}
 
-	public void setData(Map<String, ChampionAllyAdvice> data) {
+	public void setData(Map<String, ChampionTags> data) {
 		this.data = data;
 	}
 }

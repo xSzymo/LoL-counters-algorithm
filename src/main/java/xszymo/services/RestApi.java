@@ -1,27 +1,25 @@
 package xszymo.services;
 
 import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestOperations;
 
-import xszymo.rest.objects.All.AllAllyChampionsTips;
-import xszymo.rest.objects.All.AllChampions;
-import xszymo.rest.objects.All.AllChampionsStats;
-import xszymo.rest.objects.All.AllEnemyChampionsTips;
-import xszymo.rest.objects.objects.ChampionAllyAdvice;
-import xszymo.rest.objects.objects.ChampionEnemyAdvice;
-import xszymo.rest.objects.objects.ChampionInfo;
-import xszymo.rest.objects.objects.ChampionStats;
+import xszymo.rest.all.AllAllyChampionsTips;
+import xszymo.rest.all.AllChampions;
+import xszymo.rest.all.AllChampionsStats;
+import xszymo.rest.all.AllEnemyChampionsTips;
+import xszymo.rest.objects.ChampionAllyAdvice;
+import xszymo.rest.objects.ChampionEnemyAdvice;
+import xszymo.rest.objects.ChampionInfo;
+import xszymo.rest.objects.ChampionStats;
 
 @RestController
 public class RestApi {
 
-	//use your key
-	public static final String key = "";
+	public static final String key = "RGAPI-0a1ea673-7a95-4309-8c5b-1aa42a6aee51";
 
 	@Autowired
 	public RestOperations operations;
