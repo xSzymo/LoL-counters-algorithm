@@ -12,7 +12,7 @@ import xszymo.rest.objects.ChampionInfo;
 @RestController
 public class RestApiStatic {
 
-	public static final String key = "RGAPI-0a1ea673-7a95-4309-8c5b-1aa42a6aee51";
+	public static final String key = "";
 
 	public static ChampionInfo getOneChampion(String name) {
 		RestApi rest = new RestApi();

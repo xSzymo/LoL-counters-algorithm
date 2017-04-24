@@ -82,12 +82,12 @@
 									<h3>Your line &nbsp </h3>
 								</td>
 							</tr>		
-								<tr><td><input type="radio" name="line" value="mid" />mid</td></tr> 
+								<tr><td><input type="radio" name="line" value="Mid" />mid</td></tr> 
 								<tr><td><input
-									type="radio" name="line" value="supp" />supp</td></tr>
-						<tr><td><input type="radio" name="line" value="adc" />adc</td></tr>
-						<tr><td><input type="radio" name="line" value="jungle" />jungle</td></tr>
-						<tr><td><input type="radio" name="line" value="top" />top</td></tr>
+									type="radio" name="line" value="Supp" />supp</td></tr>
+						<tr><td><input type="radio" name="line" value="Adc" />adc</td></tr>
+						<tr><td><input type="radio" name="line" value="Jungle" />jungle</td></tr>
+						<tr><td><input type="radio" name="line" value="Top" />top</td></tr>
 						<tr><td><br> <input type="submit" name="name"
 						id="Go" value="Go"></input></td></tr>
 				

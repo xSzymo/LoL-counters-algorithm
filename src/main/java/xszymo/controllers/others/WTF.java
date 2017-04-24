@@ -1,6 +1,7 @@
 package xszymo.controllers.others;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collection;
@@ -11,15 +12,16 @@ import xszymo.services.RestApiStatic;
 
 public class WTF {
 
-	public static String[] getCounters(String name) throws IOException {
+	public static String[] getCounters(String name) {
 		String[] counters = getCountersChampionsNames(name, file());
 		return counters;
 	}
 
-	public static String file() throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader(SystemVariables.PATH));
-		String everything;
+	public static String file() {
+		String everything = "";
+		BufferedReader br;
 		try {
+			br = new BufferedReader(new FileReader(SystemVariables.PATH));
 			StringBuilder sb = new StringBuilder();
 			String line = br.readLine();
 
@@ -29,8 +31,11 @@ public class WTF {
 				line = br.readLine();
 			}
 			everything = sb.toString();
-		} finally {
 			br.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		return everything;
 	}
@@ -45,8 +50,8 @@ public class WTF {
 		for (int i = 0; i < newTextArray.length; i++)
 			newText += newTextArray[i];
 
-		for (ChampionInfo x : champions)
-			if (newText.contains(x.getName()) && !x.getName().equals(name))
+		for (ChampionInfo x : champions) 
+			if (newText.contains(x.getName()) && !x.getName().equals(name) && index < 5) 
 				names[index++] = x.getName();
 		return names;
 	}

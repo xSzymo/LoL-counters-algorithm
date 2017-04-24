@@ -1,5 +1,6 @@
 package xszymo.controllers.others;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import xszymo.rest.objects.ChampionInfo;
@@ -11,10 +12,13 @@ public class Algorithm {
 	public static final String MID = "mid";
 	public static final String TOP = "top";
 	public static final String JUNGLE = "jungle";
-	
-	public static Collection<ChampionInfo> algorithm(Collection<ChampionInfo> ally, Collection<ChampionInfo> enemy, ChampionInfo you, String line) {
+
+	public static Collection<ChampionInfo> algorithm(Collection<ChampionInfo> ally, Collection<ChampionInfo> enemy,
+			ChampionInfo you, String line) {
 		Collection<ChampionInfo> allChampions = RestApiStatic.getAllChampions();
-		
-		return Other.getCountersForChampionWithOutLine(allChampions, ally, enemy, you, line);		
+		if (line.equals("Mid"))
+		return Other2.sortChampions(Other.getCountersForChampionWithOutLine(allChampions, ally, enemy, you, line), line);
+		else 
+			return Other.getCountersForChampionWithOutLine(allChampions, ally, enemy, you, line);
 	}
 }

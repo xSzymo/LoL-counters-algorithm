@@ -65,139 +65,47 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-<%-- 				<input type="text" name="name" id="name" /><br> <input
-					type="button" onclick="setAlly()" value="Set your ally" /> <input
-					type="button" onclick="setEnemy()" value="Set your enemy" /> <br>
+				<div style="float: left">
+				<table width="150">
+					<c:set var="i" value="${0}"></c:set>
+					<c:forEach items="${champions1}" var="champion">
+						<c:set var="i" value="${i+1}"></c:set>
+						<c:out value="${i}. ${champion.getName()}"></c:out>
+						<br>
+					</c:forEach>
+					</table>
+				</div>
+
+				<div style="float: left">
+				<table width="150">
+					<c:forEach items="${champions2}" var="champion">
+						<c:set var="i" value="${i+1}"></c:set>
+						<c:out value="${i}. ${champion.getName()}"></c:out>
+						<br>
+					</c:forEach>
+					</table>
+				</div>
+
+				<div style="float: left">
+				<table width="150">
+					<c:forEach items="${champions3}" var="champion">
+						<c:set var="i" value="${i+1}"></c:set>
+						<c:out value="${i}. ${champion.getName()}"></c:out>
+						<br>
+					</c:forEach>
+					</table>
+				</div>
 
 
-				<br> <br> <br>
-				<form method="post" action="counters">
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}"></input> <input type="submit" name="name"
-						id="Go" value="Go"></input>
-					<div style="float: left">
-						<table>
-							<tr>
-								<td>
-									<h3>Your team &nbsp</h3>
-								</td>
-							</tr>
-							<tr>
-								<td><input type="hidden" name="allyChampion1"
-									id="allyChampion1" value=""> <!-- <input type="radio" name="me" value="me"/> -->
-									<div id="allyChampionDiv1"></div></td>
-							</tr>
-							<tr>
-								<td><input type="hidden" name="allyChampion2"
-									id="allyChampion2" value="" />
-									<div id="allyChampionDiv2"></div></td>
-							</tr>
-
-							<tr>
-								<td><input type="hidden" name="allyChampion3"
-									id="allyChampion3" value="" />
-									<div id="allyChampionDiv3"></div></td>
-							</tr>
-
-							<tr>
-								<td><input type="hidden" name="allyChampion4"
-									id="allyChampion4" value="" />
-									<div id="allyChampionDiv4"></div></td>
-							</tr>
-
-							<tr>
-								<td><input type="hidden" name="allyChampion5"
-									id="allyChampion5" value="" />
-									<div id="allyChampionDiv5"></div></td>
-							</tr>
-						</table>
-						<input type="button" onclick="cleanAlly()" value="Clear" />
-					</div>
-					<div style="float: left">
-						<table>
-							<tr>
-								<td>
-									<h3>&nbspEnemy team</h3>
-								<td>
-							</tr>
-							<tr>
-								<td><input type="hidden" name="enemyChampion1"
-									id="enemyChampion1" value="" />
-									<div id="enemyChampionDiv1"></div></td>
-							</tr>
-
-							<tr>
-								<td><input type="hidden" name="enemyChampion2"
-									id="enemyChampion2" value="" />
-									<div id="enemyChampionDiv2"></div></td>
-							</tr>
-
-							<tr>
-								<td><input type="hidden" name="enemyChampion3"
-									id="enemyChampion3" value="" />
-									<div id="enemyChampionDiv3"></div></td>
-							</tr>
-
-							<tr>
-								<td><input type="hidden" name="enemyChampion4"
-									id="enemyChampion4" value="" />
-									<div id="enemyChampionDiv4"></div></td>
-							</tr>
-
-							<tr>
-								<td><input type="hidden" name="enemyChampion5"
-									id="enemyChampion5" value="" />
-									<div id="enemyChampionDiv5"></div></td>
-							</tr>
-						</table>
-						<input type="button" onclick="cleanEnemy()" value="Clear" />
-					</div>
-				</form>
-
-
-
-
-
-
-
-
-
-				<br> <br> <br> <br> <br> <br> <br>
-				<br>
-				<form method="get" action="countersForOneChampion">
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}"></input> 
-					<div style="float: left">
-						<table>
-							<tr>
-								<td>
-									<h3>Enemy champion</h3>
-								</td>
-							</tr>
-							<tr>
-								<td><input type="hidden" name="enemyChampion"
-									id="enemyChampion" value=""></td>
-							</tr>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<tr>
-								<td><input type="text" name="enemyName" id="enemyName" /></td>
-								<td><div id="enemyChampion123"></div></td>
-							</tr>
-							<tr>
-								<td><input type="button" onclick="setOneEnemy()"
-									value="Set champ" /></td>
-							
-							<!-- <td><input type="submit" name="nameEnemy" id="Go"
-									value="Go"></input></td>  -->
-							</tr>
-						</table>
-					</div>
-				</form> --%>
+				<div style="float: left">
+				<table width="150">
+					<c:forEach items="${champions4}" var="champion">
+						<c:set var="i" value="${i+1}"></c:set>
+						<c:out value="${i}. ${champion.getName()}"></c:out>
+						<br>
+					</c:forEach>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
