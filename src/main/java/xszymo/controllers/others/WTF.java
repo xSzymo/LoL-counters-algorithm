@@ -1,14 +1,14 @@
 package xszymo.controllers.others;
 
+import xszymo.configuration.SystemVariables;
+import xszymo.rest.objects.ChampionInfo;
+import xszymo.services.RestApiStatic;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collection;
-
-import xszymo.configuration.SystemVariables;
-import xszymo.rest.objects.ChampionInfo;
-import xszymo.services.RestApiStatic;
 
 public class WTF {
 
@@ -21,7 +21,7 @@ public class WTF {
 		String everything = "";
 		BufferedReader br;
 		try {
-			br = new BufferedReader(new FileReader(SystemVariables.PATH));
+			br = new BufferedReader(new FileReader(SystemVariables.PATH_COUNTERS));
 			StringBuilder sb = new StringBuilder();
 			String line = br.readLine();
 
@@ -50,8 +50,8 @@ public class WTF {
 		for (int i = 0; i < newTextArray.length; i++)
 			newText += newTextArray[i];
 
-		for (ChampionInfo x : champions) 
-			if (newText.contains(x.getName()) && !x.getName().equals(name) && index < 5) 
+		for (ChampionInfo x : champions)
+			if (newText.contains(x.getName()) && !x.getName().equals(name) && index < 5)
 				names[index++] = x.getName();
 		return names;
 	}

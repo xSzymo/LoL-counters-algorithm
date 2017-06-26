@@ -2,3 +2,5 @@
 /target
 /WebContent
 .project
+.classpath
+/.idea

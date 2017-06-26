@@ -1,18 +1,19 @@
 package xszymo.services;
 
-import java.util.Collection;
-import java.util.LinkedList;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
+import xszymo.configuration.SystemVariables;
 import xszymo.rest.all.AllChampions;
 import xszymo.rest.objects.ChampionEnemyAdvice;
 import xszymo.rest.objects.ChampionInfo;
 
+import java.util.Collection;
+import java.util.LinkedList;
+
 @RestController
 public class RestApiStatic {
 
-	public static final String key = "";
+	public static final String key = SystemVariables.name;
 
 	public static ChampionInfo getOneChampion(String name) {
 		RestApi rest = new RestApi();

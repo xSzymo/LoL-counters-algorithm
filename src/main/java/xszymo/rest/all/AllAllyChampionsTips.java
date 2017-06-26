@@ -1,8 +1,8 @@
 package xszymo.rest.all;
 
-import java.util.Map;
-
 import xszymo.rest.objects.ChampionAllyAdvice;
+
+import java.util.Map;
 
 public class AllAllyChampionsTips {
 	private String type;

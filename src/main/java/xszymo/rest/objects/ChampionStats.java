@@ -8,6 +8,59 @@ public class ChampionStats {
 	private String title;
 	private Stats stats;
 
+	public ChampionStats() {
+
+	}
+
+	public ChampionStats(Long id, String name, String key, String title, Stats info) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.key = key;
+		this.title = title;
+		this.setStats(info);
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Stats getStats() {
+		return stats;
+	}
+
+	public void setStats(Stats stats) {
+		this.stats = stats;
+	}
+
 	public class Stats {
 		private double armor;
 		private double armorperlevel;
@@ -35,10 +88,10 @@ public class ChampionStats {
 		}
 
 		public Stats(double armor, double armorperlevel, double attackdamage, double attackdamageperlevel,
-				double attackrange, double attackspeedoffset, double attackspeedperlevel, double crit,
-				double critperlevel, double hp, double hpperlevel, double hpregen, double hpregenperlevel,
-				double movespeed, double mp, double mpperlevel, double mpregen, double mpregenperlevel,
-				double spellblock, double spellblockperlevel) {
+		             double attackrange, double attackspeedoffset, double attackspeedperlevel, double crit,
+		             double critperlevel, double hp, double hpperlevel, double hpregen, double hpregenperlevel,
+		             double movespeed, double mp, double mpperlevel, double mpregen, double mpregenperlevel,
+		             double spellblock, double spellblockperlevel) {
 			this.armor = armor;
 			this.armorperlevel = armorperlevel;
 			this.attackdamage = attackdamage;
@@ -221,60 +274,7 @@ public class ChampionStats {
 			this.spellblockperlevel = spellblockperlevel;
 		}
 
-		
-	}
 
-	public ChampionStats() {
-
-	}
-
-	public ChampionStats(Long id, String name, String key, String title, Stats info) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.key = key;
-		this.title = title;
-		this.setStats(info);
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getKey() {
-		return key;
-	}
-
-	public void setKey(String key) {
-		this.key = key;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public Stats getStats() {
-		return stats;
-	}
-
-	public void setStats(Stats stats) {
-		this.stats = stats;
 	}
 
 }

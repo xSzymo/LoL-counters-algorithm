@@ -8,6 +8,6 @@ import org.springframework.web.client.RestTemplate;
 public class RestService {
 	@Bean
 	public RestTemplate restTemplate() {
-	    return new RestTemplate();
+		return new RestTemplate();
 	}
 }

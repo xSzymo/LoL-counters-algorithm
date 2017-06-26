@@ -1,8 +1,8 @@
 package xszymo.rest.all;
 
-import java.util.Map;
-
 import xszymo.rest.objects.ChampionTags;
+
+import java.util.Map;
 
 public class AllTagsChampions {
 	private String type;

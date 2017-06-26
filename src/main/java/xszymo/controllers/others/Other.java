@@ -1,5 +1,8 @@
 package xszymo.controllers.others;
 
+import xszymo.configuration.SystemVariables;
+import xszymo.rest.objects.ChampionInfo;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -7,11 +10,9 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import xszymo.rest.objects.ChampionInfo;
-
 public class Other {
 	public static Collection<ChampionInfo> getCountersForChampionWithOutLine(Collection<ChampionInfo> allChampions,
-			Collection<ChampionInfo> ally, Collection<ChampionInfo> enemy, ChampionInfo you, String line) {
+	                                                                         Collection<ChampionInfo> ally, Collection<ChampionInfo> enemy, ChampionInfo you, String line) {
 		Collection<ChampionInfo> championsToReturn = new LinkedList<ChampionInfo>();
 		Collection<ChampionInfo> enemyChampions = new LinkedList<ChampionInfo>();
 		allChampions = getChampionsForSpecificLine(allChampions, line);
@@ -37,9 +38,9 @@ public class Other {
 	}
 
 	public static Collection<ChampionInfo> getChampionsForSpecificLine(Collection<ChampionInfo> allChampions,
-			String nameOfLine) {
+	                                                                   String nameOfLine) {
 		Collection<ChampionInfo> champions = new LinkedList<ChampionInfo>();
-		try (BufferedReader br = new BufferedReader(new FileReader("E:/123/LINEINFO.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(SystemVariables.PATH_LINE_INFO))) {
 			String line;
 			while ((line = br.readLine()) != null)
 				for (ChampionInfo x : allChampions)

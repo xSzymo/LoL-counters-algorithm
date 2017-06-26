@@ -1,18 +1,11 @@
 package xszymo.services;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Collection;
-import java.util.LinkedList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestOperations;
-
+import xszymo.configuration.SystemVariables;
 import xszymo.rest.all.AllAllyChampionsTips;
 import xszymo.rest.all.AllChampions;
 import xszymo.rest.all.AllChampionsStats;
@@ -24,10 +17,17 @@ import xszymo.rest.objects.ChampionInfo;
 import xszymo.rest.objects.ChampionStats;
 import xszymo.rest.objects.ChampionTags;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Collection;
+import java.util.LinkedList;
+
 @RestController
 public class RestApi {
 
-	public static final String key = "";
+	public static final String key = SystemVariables.name;
 
 	@Autowired
 	public RestOperations operations;
@@ -82,7 +82,7 @@ public class RestApi {
 	@RequestMapping("yolo1")
 	public void halo() throws IOException {
 		String text = "";
-		try (BufferedReader br = new BufferedReader(new FileReader("E:/123/1234.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(SystemVariables.PATH_LINE_1234))) {
 			String line;
 			while ((line = br.readLine()) != null) {
 				if (line.contains("Champion : "))
@@ -94,9 +94,9 @@ public class RestApi {
 		}
 
 		try {
-			PrintWriter pr = new PrintWriter("E:/123/lines.txt");
+			PrintWriter pr = new PrintWriter(SystemVariables.PATH_LINE_123);
 			int i = 0;
-				pr.println(text);
+			pr.println(text);
 			pr.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -220,7 +220,7 @@ public class RestApi {
 		try
 
 		{
-			PrintWriter pr = new PrintWriter("E:/123/1234.txt");
+			PrintWriter pr = new PrintWriter(SystemVariables.PATH_LINE_1234);
 
 			for (i = 0; i < yolo.length; i++) {
 				pr.println(yolo[i]);
