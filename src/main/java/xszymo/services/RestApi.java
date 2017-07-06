@@ -65,7 +65,7 @@ public class RestApi {
 
 	@RequestMapping("getEnemyChampionsTips")
 	public Collection<ChampionEnemyAdvice> getEnemyChampionsTips() {
-		String url = "https://euw1.api.riotgames.com/lol/static-data/v3/champions?champData=enemytips&api_key=" + key;
+		String url = "https://global.api.riotgames.com/api/lol/static-data/EUNE/v1.2/champion?champData=enemytips&api_key=" + key;
 		AllEnemyChampionsTips api = operations.getForObject(url, AllEnemyChampionsTips.class);
 		Collection<ChampionEnemyAdvice> champions = api.getData().values();
 		return champions;
@@ -73,7 +73,7 @@ public class RestApi {
 
 	@RequestMapping("getAllyChampionsTips")
 	public Collection<ChampionAllyAdvice> getAllyChampionsTips() {
-		String url = "https://euw1.api.riotgames.com/lol/static-data/v3/champions?champData=allytips&api_key=" + key;
+		String url = "https://global.api.riotgames.com/api/lol/static-data/EUNE/v1.2/champion?champData=allytips&api_key=" + key;
 		AllAllyChampionsTips api = operations.getForObject(url, AllAllyChampionsTips.class);
 		Collection<ChampionAllyAdvice> champions = api.getData().values();
 		return champions;
@@ -107,7 +107,7 @@ public class RestApi {
 
 	@RequestMapping("yolo")
 	public void getChampions123Tips() {
-		String url = "https://euw1.api.riotgames.com/lol/static-data/v3/champions?champData=tags&api_key=" + key;
+		String url = "https://eun1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&tags=tags&dataById=false&api_key=" + key;
 		AllTagsChampions api = operations.getForObject(url, AllTagsChampions.class);
 		Collection<ChampionTags> champions = api.getData().values();
 

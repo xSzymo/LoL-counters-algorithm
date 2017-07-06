@@ -57,7 +57,7 @@ public class WTF {
 	}
 
 	public static char[] getCountersTextForSpecificChampion(String nameWithStrong, String everything) {
-		nameWithStrong += "</strong>";
+		nameWithStrong += "</span></strong>";
 		String column = "<td class=\"column-7\">";
 
 		char[] weirdoNameoArrayo;
@@ -70,7 +70,7 @@ public class WTF {
 		int indexTextStartAt = 0;
 		int indexTextEndAt = 0;
 
-		int CHAMPION_INDEX = 10;// 14 before
+		int CHAMPION_INDEX = 14;// 14 before
 
 		for (int i = 0; i < text.length; i++) {
 			if (text[i] == championName[championIndex]) {
