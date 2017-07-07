@@ -1,27 +1,18 @@
 package xszymo.configuration;
 
-import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
-import java.net.URL;
 
 @Component
 public class SystemVariables {
-	public static final String name = "RGAPI-a82a19b3-3d19-4f99-9679-9ad71d8998a4";
-	public static final String URL = "http://how2win.pl/counterpicki/";
-	public static final String PATH = "D:/AppSL/here/";
-	public static final String PATH_COUNTERS = PATH + "counters.txt";
-	public static final String PATH_LINE_INFO = PATH + "LINEINFO.txt";
-	public static final String PATH_LINE_123 = PATH + "123.txt";
-	public static final String PATH_LINE_1234 = PATH + "1234.txt";
+    public static final String name = "RGAPI-a82a19b3-3d19-4f99-9679-9ad71d8998a4";
+    public static final String URL = "http://how2win.pl/counterpicki/";
+    public static final String PATH = "D:/AppSL/here/";
+    public static final String PATH_COUNTERS = new File("src/main/resources/counters.txt").getAbsoluteFile().toString();
+    public static final String PATH_LINE_INFO = new File("src/main/resources/LINEINFO.txt").getAbsoluteFile().toString();
+    public static final String PATH_LINE_123 = new File("src/main/resources/123.txt").getAbsoluteFile().toString();
+    public static final String PATH_LINE_1234 = new File("src/main/resources/1234.txt").getAbsoluteFile().toString();
 
 //	SystemVariables() {
 //		try (Writer writer = new BufferedWriter(
