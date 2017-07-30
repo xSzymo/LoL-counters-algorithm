@@ -1,4 +1,4 @@
-package xszymo.controllers.others;
+package xszymo.controllers.providers;
 
 import xszymo.configuration.SystemVariables;
 import xszymo.rest.objects.ChampionInfo;
@@ -10,7 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collection;
 
-public class WTF {
+public class CountersProvider {
 
 	public static String[] getCounters(String name) {
 		String[] counters = getCountersChampionsNames(name, file());

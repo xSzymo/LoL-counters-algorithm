@@ -1,4 +1,4 @@
-package xszymo.controllers.others;
+package xszymo.controllers.providers;
 
 import xszymo.configuration.SystemVariables;
 import xszymo.rest.objects.ChampionInfo;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.LinkedList;
 
-public class Other {
+public class BestChampionBuilder {
 	public static Collection<ChampionInfo> getCountersForChampionWithOutLine(Collection<ChampionInfo> allChampions,
 	                                                                         Collection<ChampionInfo> ally, Collection<ChampionInfo> enemy, ChampionInfo you, String line) {
 		Collection<ChampionInfo> championsToReturn = new LinkedList<ChampionInfo>();
@@ -22,7 +22,7 @@ public class Other {
 		for (ChampionInfo acutallyChampion : allChampions) {
 			if (acutallyChampion.getName().equals("Rakan") || acutallyChampion.getName().equals("Xayah"))
 				continue;
-			String[] countersForActuallyChampion = WTF.getCounters(acutallyChampion.getName());
+			String[] countersForActuallyChampion = CountersProvider.getCounters(acutallyChampion.getName());
 
 			if (enemyChampions.size() > 0)
 				for (ChampionInfo x2 : enemyChampions)

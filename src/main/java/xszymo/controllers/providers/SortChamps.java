@@ -1,4 +1,4 @@
-package xszymo.controllers.others;
+package xszymo.controllers.providers;
 
 import xszymo.configuration.SystemVariables;
 import xszymo.rest.objects.ChampionInfo;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.LinkedList;
 
-public class Other2 {
+public class SortChamps {
 	public static Collection<ChampionInfo> sortChampions(Collection<ChampionInfo> allChampions, String nameOfLine) {
 		Collection<ChampionInfo> champions = new LinkedList<ChampionInfo>();
 		try (BufferedReader br = new BufferedReader(new FileReader(SystemVariables.PATH_LINE_INFO))) {

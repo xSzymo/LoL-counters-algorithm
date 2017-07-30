@@ -5,8 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import xszymo.controllers.others.Algorithm;
-import xszymo.controllers.others.WTF;
+import xszymo.controllers.providers.Algorithm;
+import xszymo.controllers.providers.CountersProvider;
 import xszymo.rest.objects.ChampionInfo;
 import xszymo.services.RestApiStatic;
 
@@ -66,7 +66,7 @@ public class Counters {
 	@PostMapping("countersForOneChampion")
 	public static String counter(@RequestParam("enemyName") String enemyName, HttpServletRequest request, Model model)
 			throws IOException {
-		model.addAttribute("champions", WTF.getCounters(enemyName));
+		model.addAttribute("champions", CountersProvider.getCounters(enemyName));
 		model.addAttribute("champion", enemyName);
 		model.addAttribute("tips", RestApiStatic.getEnemyTips(enemyName));
 		return "oneChampionCounters";

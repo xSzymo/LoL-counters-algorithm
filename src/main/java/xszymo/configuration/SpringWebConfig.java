@@ -16,7 +16,9 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/src/main/resources/**").addResourceLocations("/src/main/resources/");
+		//If you get any problem with loading resources (like css/js) then try to change this line
+		//registry.addResourceHandler("/src/main/resources/**").addResourceLocations("/src/main/resources/");
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 
 	@Bean
