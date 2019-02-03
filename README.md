@@ -1,9 +1,9 @@
-##Since riot api does not exist anymore the project cannot be used.
+## Since riot api does not exist anymore the project cannot be used.
 
 -------------------------------------------------------------------------------
 <br>
 
-####A simple web application which helps during league of legends games. Choose best champion for specific situations!
+#### A simple web application which helps during league of legends games. Choose best champion for specific situations!
 
 It used to look like this way :
 - You could choose an enemy champion and after that the website would show tips and counters for that specific champion.
