@@ -15,9 +15,10 @@ It used to look like this way :
 
 <br>
 
-How to run :
-1. install docker
+How to run with docker :
+1. make sure your port 8080 is free
 2. docker run -it --rm -p 8080:8080 --name counters supermon/lolcounters
+3. get onto localhost:8080/counters
     
 
 -------------------------------------------------------------------------------
